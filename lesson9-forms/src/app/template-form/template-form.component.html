@@ -1,0 +1,15 @@
+<form #myForm='ngForm' (ngSubmit)="onSubmit(myForm.value)">
+    <label for="username">用户名：</label> <input type="text" ngModel name='username'>
+    <br>
+    <label for="pwd">密码：</label> <input #pwd='ngModel' ngModel type="password" name='pwd'>
+    <p>通过定义ngmodel变量来访问某一字段{{pwd.value}}</p>
+    <br>
+    <div ngModelGroup="userInfo">
+        <label for="age">年龄：</label> <input type="text" ngModel name='age'>
+        <label for="sex">性别：</label> <input type="text" ngModel name='sex'>
+    </div>
+    <button type='submit'>提交</button>
+</form>
+<div>
+    <p>{{myForm.value|json}}</p>
+</div>

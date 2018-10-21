@@ -1,0 +1,19 @@
+<div>
+    <form [formGroup]="formModel" (submit)='onSubmit()'>
+        <label for="username">用户名：</label><input type="text" [formControl]='username'>
+        <div formGroupName='userGroup'>
+            <label for="from">开始时间：</label><input type="text" formControlName='from'>
+            <br>
+            <label for="to">结束时间：</label><input type="text" formControlName='to'>
+        </div>
+        <div>
+            <ul>
+                <li><input type="text"></li>
+            </ul>
+            <button type='button'>增加Email</button>
+        </div>
+        <div>
+            <button type='submit'>提交</button>
+        </div>
+    </form>
+</div>

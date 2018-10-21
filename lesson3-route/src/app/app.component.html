@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <a [routerLink]="['/']">家</a>
+  <!-- router-link参数是一个数组  可以传参 -->
+  <!-- 1. 传递查询参数 queryParams  [queryParams]="{id:1}" -->
+  <!-- <a [routerLink]="['/company']" [queryParams]="{id:1}" style="margin-left: 20px;">公司</a> -->
+  <!-- 2. 路由路径传递 -->
+  <a [routerLink]="['/company','1']" style="margin-left: 20px;">公司</a>
+  <input type="button" (click)="toCompanydetail()" value="公司" style="margin-left: 20px;">
+  <!-- 辅助路由  outlet-->
+  <a [routerLink]="[{outlets:{primary:'home', chatmoney:'chat'}}]">沟通财务</a>
+  <a [routerLink]="[{outlets:{chatmoney:null}}]">取消沟通</a>
+</div>
+<router-outlet></router-outlet>
+<!-- 看作一个令牌 router里面配置了对应的路径 -->
+<router-outlet name="chatmoney"></router-outlet>

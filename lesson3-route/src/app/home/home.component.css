@@ -1,0 +1,7 @@
+.home {
+  width: 70%;
+  background: rgb(207, 207, 135);
+  height: 100px;
+  float: left;
+  box-sizing: border-box;
+}

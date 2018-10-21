@@ -1,0 +1,10 @@
+<div>
+  <p>css属性绑定</p>
+  <p [class]="textClass">范冰冰逃了8个多亿都能光明正大，我的天呐</p>
+  <p class='a b' [class.c]="isAppear">范冰冰逃了8个多亿都能光明正大，我的天呐</p>
+  <p [ngClass]="pClass">范冰冰逃了8个多亿都能光明正大，我的天呐</p>
+  <p>style绑定</p>
+  <p [style.color]="isNight ? '#000': 'orange'">我啥时候能挣够八个亿啊 哎呀 咋又在做梦了</p>
+  <p [ngStyle]="pStyle">我啥时候能挣够八个亿啊 哎呀 咋又在做梦了</p>
+  <!-- <input type="text" [(ngModel)]="name"> -->
+</div>

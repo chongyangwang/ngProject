@@ -1,0 +1,23 @@
+<div>
+    <form [formGroup]="formModel" (submit)='onSubmit()'>
+        <label for="username">用户名：</label><input type="text" formControlName='username'>
+        <div formGroupName='userGroup'>
+            <label for="from">开始时间：</label><input type="text" formControlName='from'>
+            <br>
+            <label for="to">结束时间：</label><input type="text" formControlName='to'>
+        </div>
+        <div>
+            <ul formArrayName="emails">
+                <li *ngFor="let email of emails.controls;let i = index;"><input type="text" [formControlName]='i'></li>
+            </ul>
+            <button type='button' (click)="addEmail()">增加Email</button>
+        </div>
+        <div>
+            <button type='submit'>提交表单</button>
+        </div>
+        <div>
+            <p>单独拎出来</p>
+            <label for="username">用户名2：</label><input type="text" [formControl]='username'>
+        </div>
+    </form>
+</div>

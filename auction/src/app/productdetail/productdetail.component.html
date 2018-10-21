@@ -1,0 +1,39 @@
+<div>
+    <img [src]="product.url" alt="">
+    <h3>{{product.title}}</h3>
+    <p>
+        价格：{{product.price}}
+    </p>
+    <p>
+        描述：{{product.description}}
+    </p>
+    <P>
+        评级：{{product.rating|number:'1.0-2'}}星
+        <app-star [rating]="product.rating"></app-star>
+    </P>
+</div>
+<div>
+    <h3>该商品当前评论数：{{comments.length}}条</h3>
+    <div [ngStyle]="{'margin-bottom': '10px'}">
+        <button (click)="isCommentHidden=!isCommentHidden" class="btn-success">我要占沙发</button>
+    </div>
+    <div [hidden]='isCommentHidden'>
+        评级:{{newRating}}星
+        <app-star [readonly]='false' [rating]="newRating" (ratingChange)="changeRating($event)"></app-star>
+        <textarea [(ngModel)]="newComment"></textarea>
+        <div [ngStyle]="{'margin-bottom': '10px'}">
+            <button (click)="addComment()">发表</button>
+        </div>
+    </div>
+    <div *ngFor="let comment of comments" [ngStyle]="{'background': '#ccc','padding':'10px'}">
+        <p>评论内容：{{comment.description}}</p>
+        <div>
+            <p>用户名称：{{comment.user}}</p>
+            <p>评论时间:{{comment.times | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+        </div>
+        <div>
+            评级：{{comment.rating}}星
+            <app-star [rating]="comment.rating"></app-star>
+        </div>
+    </div>
+</div>

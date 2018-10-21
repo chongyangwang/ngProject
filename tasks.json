@@ -1,0 +1,10 @@
+{
+    "version": "2.0.0",
+    "command": "tsc",
+    "shell": true,
+    "args": ["-p", "."],
+    "presentation": {
+        "reveal": "always"
+    },
+    "problemMatcher": "$tsc"
+}

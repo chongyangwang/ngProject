@@ -1,0 +1,10 @@
+<div class="company">
+  理想总是很丰满，现实也不一定就骨感！
+  公司Id是:{{companyId}}
+  公司名称是:{{companyName}}
+  <p>
+    <a [routerLink]="['./']">公司描述</a>
+    <a [routerLink]="['./boss','庄浩']">老板信息</a>
+  </p>
+  <router-outlet></router-outlet>
+</div>

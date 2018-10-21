@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <p>属性绑定</p>
+    <img src="{{imgUrl}}" alt="">
+    <!-- <img [src]="imgUrl" alt=""> -->
+  </div>
+  <div>
+    <p>演示dom属性和html属性</p>
+    <!-- dom属性绑定优先级大于html属性绑定 [value]="imgUrl" -->
+    <input type="text" value="text" (input)="handelInput($event)">
+  </div>
+  <div>
+    <p>特殊的button属性 disabled与html属性值无关</p>
+    <button disabled></button>
+  </div>
+</div>

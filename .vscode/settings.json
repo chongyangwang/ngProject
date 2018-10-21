@@ -1,0 +1,12 @@
+{
+    // 启用后，按 TAB 键时，将展开 Emmet 缩写。
+    "emmet.triggerExpansionOnTab": true,
+
+    // 添加需要补全的文档格式
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx",
+        "vue": "html",
+        "vue-html": "html",
+        "typescript": "html"
+    },
+}

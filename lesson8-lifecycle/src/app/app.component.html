@@ -1,0 +1,32 @@
+<div>
+    <!-- demo1 所有钩子-->
+    <!-- <app-cycle1 [name]="title"></app-cycle1> -->
+    <!-- demo2 ngDockeck -->
+    <!-- <div>
+        <label for="">问候语</label> <input type='text' placeholder="请输入问候语" [(ngModel)]="greeting">
+    </div>
+    <div>
+        <label for="">姓名</label> <input type='text' placeholder="请输入姓名" [(ngModel)]="user.name">
+    </div>
+    <app-cycle2 [greeting]="greeting" [user]="user"></app-cycle2> -->
+    <!-- demo3  ngafterviewInit -->
+    <!-- <app-cycle3 #cycle3></app-cycle3>
+    <app-cycle4 #cycle4></app-cycle4>
+    <button (click)="cycle4.greeting('jreey')">调用cycle4</button> -->
+    <!-- demo4 ngcontent -->
+    <!-- <h3>我是父组件</h3>
+    <p>演示ngaftercontentInit钩子</p>
+    <app-cycle5>
+        <div class='header'>这是页头 被父组件投影到子组件的内容 在子组件的结构中展示</div>
+        <div class='footer'>这是页脚 被父组件投影到子组件的内容 在子组件的结构中展示</div>
+    </app-cycle5>
+    <h3>属性绑定html元素</h3>
+    <div [innerHTML]='Content'></div> -->
+    <!-- demo5 ngaftercontentInit -->
+    <!-- <app-cycle6></app-cycle6> -->
+    <h3>demo7 ngOndestroy</h3>
+    <div>
+        <a [routerLink]="['/']">cycle7 </a> <a [routerLink]="['/cycle8']">cycle8</a>
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<form [formGroup]="formModel" (ngSubmit)="onSubmit()">
+    <label for="username">用户名：</label> <input type="text" formControlName='username'>
+    <div [hidden]="formModel.get('username').valid||formModel.get('username').untouched">
+        <div [hidden]="!formModel.hasError('required','username')">
+            请填写用户名
+        </div>
+        <div [hidden]="!formModel.hasError('minlength','username')">
+            最小长度是6
+        </div>
+    </div>
+    <br>
+    <label for="tel">手机号：</label> <input type="text" formControlName='tel'>
+    <div [hidden]="formModel.get('tel').valid||formModel.get('tel').pristine">
+        <div [hidden]="!formModel.hasError('tel','tel')">
+            手机号格式不对
+        </div>
+    </div>
+    <br>
+    <div formGroupName="pwdGroup">
+        <label for="pwd">密码：</label> <input type="password" formControlName='pwd'>
+        <div [hidden]="!formModel.hasError('minlength',['pwdGroup','pwd'])">
+            最小长度是6
+        </div>
+        <br>
+        <label for="confirmpwd">确认密码：</label> <input type="password" formControlName='confirmpwd'>
+        <br>
+        <div [hidden]="!formModel.hasError('desc','pwdGroup')">
+            {{formModel.getError('desc','pwdGroup')?.info}}
+        </div>
+    </div>
+    <button type='submit'>提交</button>
+</form>
+<div>
+    {{formModel.status}}
+</div>

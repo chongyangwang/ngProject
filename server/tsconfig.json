@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/", //输出目录
+        "module": "commonjs",
+        "sourceMap": true, //把 ts 文件编译成 js 文件的时候，同时生成对应的 map 文件
+        "moduleResolution": "node", //模块的解析
+        "emitDecoratorMetadata": true, //给源码里的装饰器声明加上设计类型元数据。查看issue #2577了解更多信息。
+        "experimentalDecorators": true, //启用实验性的ES装饰器。
+        "target": "es5",
+        "lib": ["es6", "es2015.promise", "dom"]
+    },
+    "exclude": [
+        "node_modules"
+    ],
+}

@@ -1,0 +1,24 @@
+<!-- 父向子通信 -->
+<!-- <div>
+    <h1>我是父组件</h1>
+    <div>
+        <input type="text" placeholder="请输入消息" [(ngModel)]="stock">
+        <app-order [stockcode]="stock" [amount]="100"></app-order>
+    </div>
+</div> -->
+
+<!--  第二个例子  子向父通信  父子同步最新价格-->
+<!-- <app-priceputotal (lastPrice)="handelprice($event)"></app-priceputotal>
+<div>
+    <h2>这里是父组件</h2>
+    <div>
+        <p>
+            父组件捕捉的股票信息：{{pricePutotal.stockcode}}
+        </p>
+        <p>父组件捕捉的股票价格：{{pricePutotal.latestPrice | number:'2.2-2'}}</p>
+    </div>
+</div> -->
+
+<!-- 中间人模式  子与子通信 -->
+<app-priceputotal (buy)="handelbuy($event)"></app-priceputotal>
+<app-order [pricePutotal]="pricePutotal"></app-order>

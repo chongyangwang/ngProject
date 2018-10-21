@@ -1,0 +1,7 @@
+.company {
+  width: 70%;
+  background: yellow;
+  height: 100px;
+  float: left;
+  box-sizing: border-box;
+}
